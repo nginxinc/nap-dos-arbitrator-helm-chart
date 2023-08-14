@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "nginx-appprotect-dos-arbitrator.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "nginx-appprotect-dos-arbitrator.labels" . | nindent 4 }}
 spec:
