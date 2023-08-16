@@ -81,5 +81,5 @@ Parameter | Description | Default
 --- | --- | ---
 `resources` | The resources of the Arbitrator pods. | limits:<br>cpu: 500m<br>memory: 128Mi
 `image.repository` | The image repository of the Arbitrator image. | docker-registry.nginx.com/nap-dos/app_protect_dos_arb
-`image.tag` | The tag of the Arbitrator image. | 1.1.0
+`image.tag` | The tag of the Arbitrator image. | 1.1.1
 `image.pullPolicy` | The pull policy for the Arbitrator image. | IfNotPresent
