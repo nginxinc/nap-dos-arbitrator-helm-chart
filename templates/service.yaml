@@ -9,7 +9,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: 3000
-      targetPort: http
+      targetPort: 3000
       protocol: TCP
       name: arb
   selector:
