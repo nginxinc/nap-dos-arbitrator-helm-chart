@@ -8,9 +8,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
+    - port: 3000
       targetPort: http
       protocol: TCP
-      name: http
+      name: arb
   selector:
     {{- include "nginx-appprotect-dos-arbitrator.selectorLabels" . | nindent 4 }}
