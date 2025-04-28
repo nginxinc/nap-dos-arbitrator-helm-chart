@@ -11,6 +11,6 @@ spec:
     - port: {{ .Values.service.port }}
       targetPort: 3000
       protocol: TCP
-      name: nginx-arbitrator
+      name: arb
   selector:
     {{- include "nginx-appprotect-dos-arbitrator.selectorLabels" . | nindent 4 }}
