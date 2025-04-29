@@ -29,11 +29,6 @@ securityContext:
   allowPrivilegeEscalation: false
   runAsUser: 1001
 
-service:
-  type: ClusterIP
-  port: 3000
-
-
 resources:
     limits:
       cpu: 500m
