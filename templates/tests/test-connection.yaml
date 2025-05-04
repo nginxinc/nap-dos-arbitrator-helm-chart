@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "nginx-appprotect-dos-arbitrator.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ include "nginx-appprotect-dos-arbitrator.fullname" . }}:3000']
   restartPolicy: Never

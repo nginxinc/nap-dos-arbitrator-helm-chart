@@ -1,5 +1,3 @@
-replicaCount: 1
-
 image:
   repository: docker-registry.nginx.com/nap-dos/app_protect_dos_arb
   pullPolicy: IfNotPresent
@@ -31,22 +29,10 @@ securityContext:
   allowPrivilegeEscalation: false
   runAsUser: 1001
 
-service:
-  type: ClusterIP
-  port: 3000
-
-
 resources:
     limits:
       cpu: 500m
       memory: 128Mi
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
 
 # nodeSelector: {}
 

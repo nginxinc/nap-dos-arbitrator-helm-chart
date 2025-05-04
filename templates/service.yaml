@@ -6,11 +6,11 @@ metadata:
   labels:
     {{- include "nginx-appprotect-dos-arbitrator.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: ClusterIP
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - port: 3000
+      targetPort: 3000
       protocol: TCP
-      name: http
+      name: arb
   selector:
     {{- include "nginx-appprotect-dos-arbitrator.selectorLabels" . | nindent 4 }}
